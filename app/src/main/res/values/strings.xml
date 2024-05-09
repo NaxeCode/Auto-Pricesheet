@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Auto-Price-lookup</string>
+    <string name="search_title">Look up</string>
 </resources>

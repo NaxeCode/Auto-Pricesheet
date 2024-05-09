@@ -1,6 +1,8 @@
 package com.example.auto_price_lookup
 
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -14,8 +16,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.auto_price_lookup.ui.theme.AutoPricelookupTheme
 
 class MainActivity : ComponentActivity() {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        Log.d("TAG", "onCreateOptionsMenu: normal working!");
+        menuInflater.inflate(R.menu.options_menu, menu);
+        return true;
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("TAG", "onCreateOptionsMenu: trace working!");
         enableEdgeToEdge()
         setContent {
             AutoPricelookupTheme {
